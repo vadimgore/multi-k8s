@@ -1,6 +1,6 @@
-docker build -t vadimgore/multi-client:latest -t vadimgore/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t vadimgore/multi-server:latest -t vadimgore/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t vadimgore/multi-worker:latest -t vadimgore/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t vadimgore/multi-client:latest -t vadimgore/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t vadimgore/multi-server:latest -t vadimgore/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t vadimgore/multi-worker:latest -t vadimgore/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push vadimgore/multi-client:latest
 docker push vadimgore/multi-server:latest
 docker push vadimgore/multi-worker:latest
